@@ -1,7 +1,5 @@
 # Alex - AI Financial Advisor Platform
 
-<div align="center">
-  <img src="assets/alex.png" alt="Alex Logo" width="200"/>
   
   **Agentic Learning Equities eXplainer**
   
