@@ -42,9 +42,19 @@ def main():
         capture_output=True,
     )
 
-    region = os.environ.get("DEFAULT_AWS_REGION")
-    if not region:
-        print("Error: DEFAULT_AWS_REGION not found in your .env file.")
+    # Get region from THIS service's terraform config (not global .env)
+    terraform_dir = Path(__file__).parent.parent.parent / "terraform" / "4_researcher"
+    original_dir = os.getcwd()
+    
+    try:
+        os.chdir(terraform_dir)
+        region = run_command(
+            ["terraform", "output", "-raw", "aws_region"], 
+            capture_output=True
+        )
+        os.chdir(original_dir)
+    except:
+        print("Error: Couldn't get region from terraform. Run 'terraform apply' first.")
         sys.exit(1)
 
     ecr_repository = "alex-researcher"

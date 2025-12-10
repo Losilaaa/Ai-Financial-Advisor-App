@@ -35,3 +35,8 @@ output "setup_instructions" {
     Follow the guide for instructions on building and deploying the Docker image.
   EOT
 }
+
+output "aws_region" {
+  description = "AWS region where researcher is deployed"
+  value       = var.aws_region
+}

@@ -60,7 +60,8 @@ def package_lambda():
         # The --no-emit-project excludes the current project from requirements
         # We still need to manually install the database package
         docker_cmd = [
-            "docker", "run", "--rm",
+            "docker", "run", "--rm", 
+            "--ulimit", "nofile=65536:65536", 
             "--platform", "linux/amd64",
             "-v", f"{temp_path}:/build",
             "-v", f"{backend_dir}/database:/database",

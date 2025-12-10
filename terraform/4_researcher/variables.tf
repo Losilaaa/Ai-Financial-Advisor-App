@@ -23,5 +23,5 @@ variable "alex_api_key" {
 variable "scheduler_enabled" {
   description = "Enable automated research scheduler"
   type        = bool
-  default     = false
+  default     = true
 }

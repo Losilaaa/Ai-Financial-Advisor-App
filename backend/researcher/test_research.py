@@ -17,6 +17,7 @@ def get_service_url():
         # Get service ARN first
         result = subprocess.run([
             "aws", "apprunner", "list-services",
+            "--region", "eu-west-2",  # ADD THIS LINE
             "--query", "ServiceSummaryList[?ServiceName=='alex-researcher'].ServiceArn",
             "--output", "json"
         ], capture_output=True, text=True, check=True)
@@ -33,6 +34,7 @@ def get_service_url():
         result = subprocess.run([
             "aws", "apprunner", "describe-service",
             "--service-arn", service_arn,
+            "--region", "eu-west-2",  # ADD THIS LINE
             "--query", "Service.ServiceUrl",
             "--output", "text"
         ], capture_output=True, text=True, check=True)
