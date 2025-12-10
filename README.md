@@ -1,7 +1,9 @@
-# Alex - AI Financial Advisor Platform
+# AI Financial Advisor Platform
+<img width="1683" height="1031" alt="1" src="https://github.com/user-attachments/assets/1420e264-8d78-43dd-8b4f-522c29080288" />
+<img width="1689" height="1020" alt="2" src="https://github.com/user-attachments/assets/1e6bcacc-0f25-44a0-8161-62586700eb9d" />
 
   
-  **Agentic Learning Equities eXplainer**
+  **Agentic Learning Equities Explainer**
   
   A production-grade multi-agent AI system for personalized financial planning and portfolio analysis.
   
@@ -535,7 +537,7 @@ If you find this project helpful, consider giving it a ⭐!
 
 <div align="center">
   
-  **Built with 🚀 by [Your Name]**
+  **Built with 🚀 by [Ali Soleymani]**
   
   Demonstrating production AI deployment with AWS serverless architecture
   
